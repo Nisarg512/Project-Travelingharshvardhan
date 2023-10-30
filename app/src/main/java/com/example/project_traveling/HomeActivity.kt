@@ -5,6 +5,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
+import android.widget.ImageView
 import android.widget.TextView
 
 class HomeActivity : AppCompatActivity() {
@@ -14,11 +16,19 @@ class HomeActivity : AppCompatActivity() {
 
         val myButton = findViewById<TextView>(R.id.textView4)
         myButton?.setOnClickListener {
-            // Handle the click event here
-            // You can perform actions like navigating to another page, displaying a dialog, etc.
-            // For example:
-            // val intent = Intent(this, AnotherActivity::class.java)
-            val intent = Intent(this,MusicActivity::class.java )
+            val intent = Intent(this, MusicActivity::class.java)
+            startActivity(intent)
+        }
+        val videobutton = findViewById<TextView>(R.id.textView411)
+        videobutton?.setOnClickListener {
+            val intent = Intent(this, VideoActivity::class.java)
+            startActivity(intent)
+
+
+        }
+        val searchbutton = findViewById<ImageView>(R.id.imageView3)
+        searchbutton?.setOnClickListener {
+            val intent = Intent(this, SearchActivity::class.java)
             startActivity(intent)
         }
     }

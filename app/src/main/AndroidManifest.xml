@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    <uses-permission android:name="android.permission.INTERNET"/>
+
 
     <application
         android:allowBackup="true"
@@ -15,11 +18,15 @@
         <service
             android:name=".MyService"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true">
+
+        </service>
         <service
             android:name=".MyService"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true">
+
+        </service>
         <activity
             android:name=".MainActivity"
             android:exported="true"/>
@@ -33,8 +40,21 @@
             android:name=".Music1"
             android:exported="true"/>
         <activity
+            android:name=".SearchActivity"
+            android:exported="true"/>
+        <activity
             android:name=".Music2"
             android:exported="true"/>
+        <activity
+            android:name=".VideoActivity"
+            android:exported="true"
+           android:screenOrientation="landscape"
+            />
+        <activity
+            android:name=".YoutubeActivity"
+            android:exported="false"
+            android:screenOrientation="landscape"
+            />
         <activity
             android:name=".MusicActivity"
             android:exported="true"/>
